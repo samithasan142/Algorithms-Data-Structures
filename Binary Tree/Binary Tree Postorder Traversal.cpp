@@ -20,7 +20,6 @@ public:
         if(root->left){
             postorderTraversal(root->left);
         }
-
         if(root->right){
             postorderTraversal(root->right);
         }
@@ -54,6 +53,7 @@ int main() {
 
     return 0;
 }
+
 /*
         _1_
        /   \
@@ -63,7 +63,3 @@ int main() {
 
     Postorder Traversal: 4 5 2 6 7 3 1
 */
-
-
-
-
