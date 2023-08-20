@@ -21,7 +21,6 @@ public:
         if(root->left){
             preorderTraversal(root->left);
         }
-
         if(root->right){
             preorderTraversal(root->right);
         }
@@ -54,6 +53,7 @@ int main() {
 
     return 0;
 }
+
 /*
         _1_
        /   \
@@ -63,5 +63,3 @@ int main() {
 
     Preorder Traversal: 1 2 4 5 3 6 7
 */
-
-
