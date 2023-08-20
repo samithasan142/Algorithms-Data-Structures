@@ -20,7 +20,6 @@ public:
         if(root->left){
             inorderTraversal(root->left);
         }
-
         ans.push_back(root->val);
         if(root->right){
             inorderTraversal(root->right);
@@ -54,6 +53,7 @@ int main() {
 
     return 0;
 }
+
 /*
         _1_
        /   \
@@ -63,6 +63,3 @@ int main() {
 
     Inorder Traversal: 4 2 5 1 6 3 7
 */
-
-
-
