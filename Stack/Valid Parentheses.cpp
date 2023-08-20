@@ -35,11 +35,11 @@ int main() {
     Solution sol;
     string input = "{[()]}";
 
-    cout << "Input: " << input << endl;
     if(sol.isValid(input)){
-        cout << "Input is valid" << endl;
+        cout << input << " is valid" << endl;
+    }else{
+        cout << input << " is not valid" << endl;
     }
-    else cout << "Input is not valid" << endl;
 
     return 0;
 }
