@@ -13,27 +13,19 @@ struct TreeNode {
 class Solution {
 public:
     vector<int> ans;
-
-    void inorderTraversalR(TreeNode* root){
-        if(root == nullptr) return;
-
-        if(root->left){
-            inorderTraversal(root->left);
-        }
+    void inorder(TreeNode* root){
+        if(root->left) inorder(root->left);
         ans.push_back(root->val);
-        if(root->right){
-            inorderTraversal(root->right);
-        }
+        if(root->right) inorder(root->right);
     }
-
     vector<int> inorderTraversal(TreeNode* root) {
-        inorderTraversalR(root);
+        if(root == NULL) return ans;
+        inorder(root);
         return ans;
     }
 };
 
 int main() {
-    // Creating a binary tree
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
@@ -62,4 +54,20 @@ int main() {
     4   5 6   7
 
     Inorder Traversal: 4 2 5 1 6 3 7
+*/
+
+/*
+class Solution {
+public:
+    vector<int> ans;
+    vector<int> inorderTraversal(TreeNode* root) {
+        if(root == NULL) return ans;
+
+        inorderTraversal(root->left);
+        ans.push_back(root->val);
+        inorderTraversal(root->right);
+
+        return ans;
+    }
+};
 */
