@@ -13,27 +13,19 @@ struct TreeNode {
 class Solution {
 public:
     vector<int> ans;
-
-    void preorderTraversalR(TreeNode* root){
-        if(root == nullptr) return;
-
+    void preorder(TreeNode* root){
         ans.push_back(root->val);
-        if(root->left){
-            preorderTraversal(root->left);
-        }
-        if(root->right){
-            preorderTraversal(root->right);
-        }
+        if(root->left) preorder(root->left);
+        if(root->right) preorder(root->right);
     }
-
     vector<int> preorderTraversal(TreeNode* root) {
-        preorderTraversalR(root);
+        if(root == NULL) return ans;
+        preorder(root);
         return ans;
     }
 };
 
 int main() {
-    // Creating a binary tree
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
@@ -62,4 +54,23 @@ int main() {
     4   5 6   7
 
     Preorder Traversal: 1 2 4 5 3 6 7
+*/
+
+/*
+class Solution {
+public:
+    vector<int> ans;
+    vector<int> preorderTraversal(TreeNode* root) {
+        if(root == NULL) return ans;
+
+        ans.push_back(root->val);
+        preorderTraversal(root->left);
+        preorderTraversal(root->right);
+
+        return ans;
+    }
+};
+    
+    // We can also use this code. But it takes more Memory. Runtime: 0ms, Memory: 10.4 MB
+    // For the previous code, Runtime: 4ms, Memory: 8.3 MB 
 */
