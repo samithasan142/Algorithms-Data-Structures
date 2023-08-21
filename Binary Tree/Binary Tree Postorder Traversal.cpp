@@ -13,27 +13,19 @@ struct TreeNode {
 class Solution {
 public:
     vector<int> ans;
-
-    void postorderTraversalR(TreeNode* root){
-        if(root == nullptr) return;
-
-        if(root->left){
-            postorderTraversal(root->left);
-        }
-        if(root->right){
-            postorderTraversal(root->right);
-        }
+    void postorder(TreeNode* root){
+        if(root->left) postorder(root->left);
+        if(root->right) postorder(root->right);
         ans.push_back(root->val);
     }
-
     vector<int> postorderTraversal(TreeNode* root) {
-        postorderTraversalR(root);
+        if(root == NULL) return ans;
+        postorder(root);
         return ans;
     }
 };
 
 int main() {
-    // Creating a binary tree
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
@@ -53,7 +45,6 @@ int main() {
 
     return 0;
 }
-
 /*
         _1_
        /   \
@@ -62,4 +53,20 @@ int main() {
     4   5 6   7
 
     Postorder Traversal: 4 5 2 6 7 3 1
+*/
+
+/*
+class Solution {
+public:
+    vector<int> ans;
+    vector<int> postorderTraversal(TreeNode* root) {
+        if(root == NULL) return ans;
+
+        postorderTraversal(root->left);
+        postorderTraversal(root->right);
+        ans.push_back(root->val);
+
+        return ans;
+    }
+};
 */
