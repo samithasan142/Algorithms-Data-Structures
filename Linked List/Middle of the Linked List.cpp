@@ -33,12 +33,11 @@ int main() {
     head->next->next->next->next = new ListNode(5);
 
     Solution sol;
+    
     ListNode* middle = sol.middleNode(head);
-
     cout << "The middle node value is: " << middle->val << endl;
 
     return 0;
 }
-
 
 // This algorithm is called "Hare And Tortoise Algorithm"
