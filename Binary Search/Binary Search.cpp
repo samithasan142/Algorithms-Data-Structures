@@ -1,4 +1,4 @@
-/* Binary Search */
+/* Leetcode Problem no: 704 */
 
 #include <bits/stdc++.h>
 using namespace std;
