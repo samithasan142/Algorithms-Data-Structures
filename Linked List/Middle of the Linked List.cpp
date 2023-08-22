@@ -13,15 +13,15 @@ struct ListNode {
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode* slowPtr = head;
-        ListNode* fastPtr = head;
+        ListNode* slow = head;
+        ListNode* fast = head;
 
-        while(fastPtr != NULL && fastPtr->next != NULL){
-            slowPtr = slowPtr->next;
-            fastPtr = fastPtr->next->next;
+        while(fast != NULL && fast->next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
         }
 
-        return slowPtr;
+        return slow;
     }
 };
 
