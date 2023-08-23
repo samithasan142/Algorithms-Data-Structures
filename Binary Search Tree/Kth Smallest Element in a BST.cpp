@@ -1,4 +1,4 @@
-/* Leetcode Problem no: 230 */
+/* Leetcode Problem no: 230 (Medium) */
 
 #include<bits/stdc++.h>
 using namespace std;
