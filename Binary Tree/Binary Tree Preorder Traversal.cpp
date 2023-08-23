@@ -1,4 +1,4 @@
-/* Leetcode Problem no: 144 */
+/* Leetcode Problem no: 144 (Easy) */
 
 #include<bits/stdc++.h>
 using namespace std;
