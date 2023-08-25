@@ -13,6 +13,7 @@ int fib(int n){
     }
     return nextTerm;
 }
+
 int main(){
     int n = 10;
     cout << fib(n);
