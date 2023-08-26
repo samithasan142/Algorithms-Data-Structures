@@ -1,5 +1,9 @@
 /* Leetcode Problem no: 2108 (Easy) */
 
+/**
+    Approach 1:
+**/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -30,8 +34,11 @@ int main(){
 */
 
 
-/* Approach: 2
+/**
+    Approach 2:
+**/
 
+/*
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -50,8 +57,9 @@ int main(){
 
     return 0;
 }
+*/
 
-// Time Complexity     : O(n)
-// Space Complexity    : O(n)
-
+/*
+    Time Complexity     : O(n)
+    Space Complexity    : O(n)
 */
